@@ -2,6 +2,7 @@ import ColorGuard from "./ColorGuard.js";
 
 export default class {
 	constructor(ground, formation) {
+		this.dmajor = null;
 		this.ground = ground;
 		this.cguards = this.createCguards(formation);
 		this.addEventListeners();
@@ -78,7 +79,11 @@ export default class {
 		}
 	}
 
-	noteOn(note) {}
+	noteOn(note) {
+		this.dmajor.noteOn(note);
+	}
 
-	noteOff(note) {}
+	noteOff(note) {
+		this.dmajor.noteOff(note);
+	}
 }

@@ -1,9 +1,9 @@
 export default class {
 	constructor() {
 		this.notes = [
-			[0, 1, 2],
-			[3, 4, 5],
-			[6, 7, 8]
+			["B4", "C5", "D5"],
+			["F4", "G4", "A4"],
+			["C4", "D4", "E4"]
 		];
 	}
 }
