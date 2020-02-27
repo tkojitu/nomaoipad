@@ -1,7 +1,7 @@
 export default class {
-	constructor(battery, bmaster) {
+	constructor(battery, brass) {
 		this.battery = battery;
-		this.bmaster = bmaster;
+		this.brass = brass;
 	}
 
 	draw() {
@@ -9,10 +9,10 @@ export default class {
 	}
 
 	noteOn(note) {
-		this.bmaster.noteOn(note);
+		this.brass.noteOn(note);
 	}
 
 	noteOff(note) {
-		this.bmaster.noteOff(note);
+		this.brass.noteOff(note);
 	}
 }

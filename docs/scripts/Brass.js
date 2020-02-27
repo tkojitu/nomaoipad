@@ -1,5 +1,11 @@
+import Note from "./Note.js";
+
 export default class {
 	constructor() {
+		this.context = new AudioContext();
+		this.gain = this.context.createGain();
+		this.gain.connect(this.context.destination);
+		this.brasses = new Map();
 		this.dictionary = this.makeDictionary();
 	}
 
@@ -199,7 +205,7 @@ export default class {
 			"C#4",
 			"D4",
 			"D#4",
-			"E04",
+			"E4",
 			"F4",
 			"F#4",
 			"G4",
@@ -272,8 +278,26 @@ export default class {
 	}
 
 	noteOn(note) {
+		let brass = this.brasses.get(note);
+		if (brass) {
+			return;
+		}
+		let freq = this.dictionary.get(note);
+		if (!freq) {
+			console.log("note(" + note + ") is missing.");
+			return;
+		}
+		brass = new Note(this.context, note, freq, this.gain);
+		brass.noteOn();
+		this.brasses.set(note, brass);
 	}
 
 	noteOff(note) {
+		let brass = this.brasses.get(note);
+		if (!brass) {
+			return;
+		}
+		brass.noteOff();
+		this.brasses.delete(note);
 	}
 }

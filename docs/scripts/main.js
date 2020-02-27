@@ -1,5 +1,5 @@
-import BandMaster from "./BandMaster.js";
 import Battery from "./Battery.js";
+import Brass from "./Brass.js";
 import Container from "./Container.js";
 import DrumMajor from "./DrumMajor.js";
 import Formation from "./Formation.js";
@@ -27,15 +27,15 @@ window.addEventListener(
 				return new Battery(c.geti("ground"), c.geti("formation"));
 			});
 		c.define(
-			"bmaster",
+			"brass",
 			function(c) {
-				return new BandMaster();
+				return new Brass();
 			});
 		c.define(
 			"dmajor",
 			function(c) {
 				let battery = c.geti("battery");
-				let dmajor = new DrumMajor(battery, c.geti("bmaster"));
+				let dmajor = new DrumMajor(battery, c.geti("brass"));
 				battery.dmajor = dmajor;
 				return dmajor;
 			});
