@@ -2,14 +2,17 @@
 <head>
 <meta charset="UTF-8"/>
 <style>
-#canvas {
+canvas {
 	border: 1px solid #000000;
 }
 </style>
 <script type="module" src="./scripts/main.js"></script>
 </head>
 <body oncontextmenu="return false;">
-<canvas id="ground"></canvas>
+<canvas id="ground" width=800 height=1024></canvas>
+<br>
+<canvas id="oscillo" width=256 height=256></canvas>
+<canvas id="spectrum" width=256 height=256></canvas>
 <input id="padtype" type="hidden" value="desktop">
 </body>
 </html>
