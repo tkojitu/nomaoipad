@@ -1,5 +1,6 @@
 import Battery from "./Battery.js";
 import Brass from "./Brass.js";
+import Config from "./Config.js";
 import Container from "./Container.js";
 import DrumMajor from "./DrumMajor.js";
 import Formation from "./Formation.js";
@@ -9,11 +10,19 @@ window.addEventListener(
 	function() {
 		let c = new Container();
 		c.define(
+			"config",
+			function(c) {
+				return new Config();
+			});
+		c.define(
 			"ground",
 			function(c) {
 				let canvas = document.getElementById("ground");
-				canvas.width = window.innerWidth - 20;
-				canvas.height = window.innerHeight - 20;
+				let config = c.geti("config");
+				if (config.isMobile()) {
+					canvas.width = window.innerWidth - 20;
+					canvas.height = window.innerHeight - 20;
+				}
 				return canvas;
 			});
 		c.define(
