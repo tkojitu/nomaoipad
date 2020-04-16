@@ -12,10 +12,10 @@ export default class {
 		let results = [];
 		let size = this.calcCguardSize(formation);
 		let y = 0;
-		for (let row = 0; row < formation.notes.length; ++row) {
+		for (let row = 0; row < formation.nids.length; ++row) {
 			let x = 0;
-			for (let col = 0; col < formation.notes[row].length; ++col) {
-				results.push(new ColorGuard(this, x, y, size, size, formation.notes[row][col]));
+			for (let col = 0; col < formation.nids[row].length; ++col) {
+				results.push(new ColorGuard(this, x, y, size, size, formation.nids[row][col]));
 				x += size
 			}
 			y += size;
@@ -24,8 +24,8 @@ export default class {
 	}
 
 	calcCguardSize(formation) {
-		let height = Math.floor(this.ground.height / formation.notes.length);
-		let width = Math.floor(this.ground.width / formation.notes[0].length);
+		let height = Math.floor(this.ground.height / formation.nids.length);
+		let width = Math.floor(this.ground.width / formation.nids[0].length);
 		return (height < width) ? height : width;
 	}
 
@@ -79,11 +79,12 @@ export default class {
 		}
 	}
 
-	noteOn(note) {
-		this.dmajor.noteOn(note);
+	noteOn(nid) {
+		this.dmajor.noteOn(nid);
 	}
 
-	noteOff(note) {
-		this.dmajor.noteOff(note);
+	noteOff(nid) {
+		this.dmajor.noteOff(nid);
 	}
 }
+

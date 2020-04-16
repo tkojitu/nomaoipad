@@ -8,11 +8,11 @@ export default class {
 		this.battery.draw();
 	}
 
-	noteOn(note) {
-		this.brass.noteOn(note);
+	noteOn(nid) {
+		this.brass.noteOn(nid);
 	}
 
-	noteOff(note) {
-		this.brass.noteOff(note);
+	noteOff(nid) {
+		this.brass.noteOff(nid);
 	}
 }

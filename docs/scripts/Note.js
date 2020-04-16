@@ -1,9 +1,10 @@
 export default class {
-	constructor(context, note, frequency, gain) {
+	constructor(context, nid, frequency, gain) {
 		this.context = context;
-		this.note = note;
+		this.nid = nid;
 		this.frequency = frequency;
 		this.gain = gain;
+		this.oscillator = null;
 	}
 
 	makeOscillator() {
@@ -14,7 +15,7 @@ export default class {
 	}
 
 	noteOn() {
-		console.log(this.note + "on");
+		console.log(this.nid + " on");
 		if (this.oscillator) {
 			return;
 		}

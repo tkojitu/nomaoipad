@@ -5,7 +5,7 @@ export default class {
 		this.context = new AudioContext();
 		this.gain = this.context.createGain();
 		this.gain.connect(this.context.destination);
-		this.brasses = new Map();
+		this.notes = new Map();
 		this.dictionary = this.makeDictionary();
 	}
 
@@ -140,7 +140,7 @@ export default class {
 			11839.8215267723,
 			12543.8539514160 // 127
 		];
-		let notes = [
+		let nids = [
 			"C-1", // 0
 			"C#-1",
 			"D-1",
@@ -272,32 +272,32 @@ export default class {
 		];
 		let dic = new Map();
 		for (let i = 0; i < freqs.length; ++i) {
-			dic.set(notes[i], freqs[i]);
+			dic.set(nids[i], freqs[i]);
 		}
 		return dic;
 	}
 
-	noteOn(note) {
-		let brass = this.brasses.get(note);
-		if (brass) {
+	noteOn(nid) {
+		let note = this.notes.get(nid);
+		if (note) {
 			return;
 		}
-		let freq = this.dictionary.get(note);
+		let freq = this.dictionary.get(nid);
 		if (!freq) {
-			console.log("note(" + note + ") is missing.");
+			console.log("note(" + nid + ") is missing.");
 			return;
 		}
-		brass = new Note(this.context, note, freq, this.gain);
-		brass.noteOn();
-		this.brasses.set(note, brass);
+		note = new Note(this.context, nid, freq, this.gain);
+		this.notes.set(nid, note);
+		note.noteOn();
 	}
 
-	noteOff(note) {
-		let brass = this.brasses.get(note);
-		if (!brass) {
+	noteOff(nid) {
+		let note = this.notes.get(nid);
+		if (!note) {
 			return;
 		}
-		brass.noteOff();
-		this.brasses.delete(note);
+		note.noteOff();
+		this.notes.delete(nid);
 	}
 }

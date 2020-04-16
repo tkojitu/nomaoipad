@@ -8,4 +8,12 @@ export default class {
 		let e = document.getElementById("padtype");
 		return e.value == "desktop";
 	}
+
+	getOscilloName() {
+		return "oscillo";
+	}
+
+	getSpectrumName() {
+		return "spectrum";
+	}
 }

@@ -1,11 +1,11 @@
 export default class {
-	constructor(battery, x, y, width, height, note) {
+	constructor(battery, x, y, width, height, nid) {
 		this.battery = battery;
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
-		this.note = note;
+		this.nid = nid;
 		this.ids = [];
 	}
 
@@ -112,12 +112,12 @@ export default class {
 
 	flagUp(gx) {
 		this.drawUp(gx);
-		this.battery.noteOn(this.note);
+		this.battery.noteOn(this.nid);
 	}
 
 	flagDown(gx) {
 		this.drawDown(gx);
-		this.battery.noteOff(this.note);
+		this.battery.noteOff(this.nid);
 	}
 }
 
