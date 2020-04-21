@@ -3,10 +3,28 @@ import Note from "./Note.js";
 export default class {
 	constructor() {
 		this.context = new AudioContext();
-		this.gain = this.context.createGain();
-		this.gain.connect(this.context.destination);
+		this.gain = this.newGain(this.context);
+		this.analyser = this.newAnalyser(this.context);
+		this.connectAll();
 		this.notes = new Map();
 		this.dictionary = this.makeDictionary();
+	}
+
+	newGain(context) {
+		let gain = context.createGain();
+		gain.gain.value = 0.5;
+		return gain;
+	}
+
+	newAnalyser(context) {
+		let analyser = context.createAnalyser();
+		analyser.fftSize = 256;
+		return analyser;
+	}
+
+	connectAll(context, gain, analyser) {
+		this.analyser.connect(this.gain);
+		this.gain.connect(this.context.destination);
 	}
 
 	makeDictionary() {
@@ -287,7 +305,7 @@ export default class {
 			console.log("note(" + nid + ") is missing.");
 			return;
 		}
-		note = new Note(this.context, nid, freq, this.gain);
+		note = new Note(this.context, nid, freq, this.analyser);
 		this.notes.set(nid, note);
 		note.noteOn();
 	}

@@ -1,9 +1,9 @@
 export default class {
-	constructor(context, nid, frequency, gain) {
+	constructor(context, nid, frequency, node) {
 		this.context = context;
 		this.nid = nid;
 		this.frequency = frequency;
-		this.gain = gain;
+		this.node = node;
 		this.oscillator = null;
 	}
 
@@ -20,8 +20,7 @@ export default class {
 			return;
 		}
 		this.oscillator = this.makeOscillator();
-		this.gain.gain.value = 0.5;
-		this.oscillator.connect(this.gain);
+		this.oscillator.connect(this.node);
 		this.oscillator.start(0);
 	}
 
