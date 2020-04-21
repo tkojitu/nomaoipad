@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>150</y>
+      <x>550</x>
+      <y>160</y>
       <w>100</w>
       <h>100</h>
     </coordinates>
@@ -20,8 +20,8 @@ noteOff(nid)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>250</x>
-      <y>150</y>
+      <x>180</x>
+      <y>160</y>
       <w>130</w>
       <h>200</h>
     </coordinates>
@@ -43,8 +43,8 @@ noteOff(nid)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>400</y>
+      <x>140</x>
+      <y>410</y>
       <w>190</w>
       <h>220</h>
     </coordinates>
@@ -67,8 +67,8 @@ onTouchEnd(touches, gx)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
-      <y>20</y>
+      <x>520</x>
+      <y>30</y>
       <w>100</w>
       <h>70</h>
     </coordinates>
@@ -82,8 +82,8 @@ isDesktop()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
-      <y>20</y>
+      <x>350</x>
+      <y>30</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -93,8 +93,8 @@ isDesktop()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
-      <y>150</y>
+      <x>360</x>
+      <y>160</y>
       <w>100</w>
       <h>120</h>
     </coordinates>
@@ -111,8 +111,8 @@ noteOff(nid)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>150</y>
+      <x>40</x>
+      <y>160</y>
       <w>100</w>
       <h>50</h>
     </coordinates>
@@ -125,8 +125,8 @@ nids
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>150</y>
+      <x>820</x>
+      <y>160</y>
       <w>100</w>
       <h>140</h>
     </coordinates>
@@ -144,8 +144,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>160</y>
+      <x>300</x>
+      <y>170</y>
       <w>80</w>
       <h>40</h>
     </coordinates>
@@ -155,8 +155,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>160</y>
+      <x>450</x>
+      <y>170</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -166,8 +166,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>160</y>
+      <x>130</x>
+      <y>170</y>
       <w>70</w>
       <h>40</h>
     </coordinates>
@@ -177,8 +177,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
-      <y>340</y>
+      <x>230</x>
+      <y>350</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -188,19 +188,19 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>160</y>
-      <w>90</w>
+      <x>640</x>
+      <y>170</y>
+      <w>200</w>
       <h>40</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>350</y>
+      <x>820</x>
+      <y>360</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -210,8 +210,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
-      <y>280</y>
+      <x>860</x>
+      <y>290</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -221,8 +221,8 @@ noteOff()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>350</y>
+      <x>550</x>
+      <y>360</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -232,8 +232,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>240</y>
+      <x>590</x>
+      <y>250</y>
       <w>30</w>
       <h>130</h>
     </coordinates>
@@ -243,19 +243,19 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>350</y>
-      <w>90</w>
+      <x>640</x>
+      <y>360</y>
+      <w>60</w>
       <h>40</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>350</y>
+      <x>420</x>
+      <y>360</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -265,8 +265,8 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>350</y>
+      <x>510</x>
+      <y>360</y>
       <w>60</w>
       <h>40</h>
     </coordinates>
@@ -276,12 +276,45 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>240</y>
+      <x>450</x>
+      <y>250</y>
       <w>170</w>
       <h>130</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>150.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>360</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Analyser</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>250</y>
+      <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;140.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>360</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
   </element>
 </diagram>
