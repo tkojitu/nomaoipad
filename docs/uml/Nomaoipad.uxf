@@ -6,15 +6,17 @@
     <coordinates>
       <x>550</x>
       <y>160</y>
-      <w>100</w>
-      <h>100</h>
+      <w>180</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Brass
 --
 notes
 --
 noteOn(nid)
-noteOff(nid)</panel_attributes>
+noteOff(nid)
+getByteTimeDomainData()
+getByteFrequencyData()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -188,13 +190,13 @@ noteOff()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
+      <x>720</x>
       <y>170</y>
-      <w>200</w>
+      <w>120</w>
       <h>40</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -226,19 +228,20 @@ noteOff()</panel_attributes>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>Gain</panel_attributes>
+    <panel_attributes>Gain
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>590</x>
-      <y>250</y>
+      <y>280</y>
       <w>30</w>
-      <h>130</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -277,12 +280,12 @@ noteOff()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>450</x>
-      <y>250</y>
+      <y>280</y>
       <w>170</w>
-      <h>130</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>150.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -299,12 +302,12 @@ noteOff()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>590</x>
-      <y>250</y>
+      <y>280</y>
       <w>160</w>
-      <h>130</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;140.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -316,5 +319,121 @@ noteOff()</panel_attributes>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>450</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Monitor
+--
+soundSource
+--
+draw()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>510</y>
+      <w>110</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>90.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>510</y>
+      <w>110</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;90.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>610</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Spectrumscope
+--
+--
+drawSound()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>610</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Oscilloscope
+--
+--
+drawSound()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>440</y>
+      <w>100</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Ascope
+--
+player
+canvasName
+--
+draw()
+drawSound()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>490</y>
+      <w>110</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>490</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>280</y>
+      <w>100</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>
+layer=0</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;170.0</additional_attributes>
   </element>
 </diagram>
