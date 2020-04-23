@@ -318,4 +318,22 @@ export default class {
 		note.noteOff();
 		this.notes.delete(nid);
 	}
+
+	getByteTimeDomainData() {
+		if (!this.analyser) {
+			return [];
+		}
+		let data = new Uint8Array(this.analyser.fftSize);
+		this.analyser.getByteTimeDomainData(data);
+		return data;
+	}
+
+	getByteFrequencyData() {
+		if (!this.analyser) {
+			return [];
+		}
+		let data = new Uint8Array(this.analyser.fftSize / 4);
+		this.analyser.getByteFrequencyData(data);
+		return data;
+	}
 }
