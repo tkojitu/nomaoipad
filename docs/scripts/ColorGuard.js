@@ -105,10 +105,7 @@ export default class {
 	}
 
 	toClientPos(x, y) {
-		let pos = [];
-		pos[0] = x - this.groundRect.x;
-		pos[1] = y - this.groundRect.y;
-		return pos;
+		return [x - this.groundRect.x, y - this.groundRect.y];
 	}
 
 	drawUp(gx) {

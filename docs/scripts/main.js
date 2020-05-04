@@ -4,6 +4,7 @@ import Config from "./Config.js";
 import Container from "./Container.js";
 import DrumMajor from "./DrumMajor.js";
 import Formation from "./Formation.js";
+import Monitor from "./Monitor.js";
 
 window.addEventListener(
 	"load",
@@ -35,10 +36,23 @@ window.addEventListener(
 				return new Brass();
 			});
 		c.define(
+			"monitor",
+			function(c) {
+				let monitor = document.getElementById("monitor");
+				if (!monitor) {
+					return null;
+				}
+				return new Monitor(c.geti("brass"));
+			});
+		c.define(
 			"dmajor",
 			function(c) {
 				let battery = c.geti("battery");
-				let dmajor = new DrumMajor(c.geti("config"), battery, c.geti("brass"));
+				let dmajor = new DrumMajor(
+					c.geti("config"),
+					battery,
+					c.geti("brass"),
+					c.geti("monitor"));
 				battery.dmajor = dmajor;
 				return dmajor;
 			});

@@ -1,8 +1,9 @@
 export default class {
-	constructor(config, battery, brass) {
+	constructor(config, battery, brass, monitor) {
 		this.config = config;
 		this.battery = battery;
 		this.brass = brass;
+		this.monitor = monitor;
 	}
 
 	init() {
@@ -32,6 +33,7 @@ export default class {
 
 	draw() {
 		this.battery.draw();
+		this.monitor?.draw();
 	}
 
 	noteOn(nid) {
