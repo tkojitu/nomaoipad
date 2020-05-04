@@ -1,10 +1,11 @@
 export default class {
-	constructor(battery, x, y, width, height, nid) {
+	constructor(battery, x, y, width, height, groundRect, nid) {
 		this.battery = battery;
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		this.groundRect = groundRect;
 		this.nid = nid;
 		this.ids = [];
 	}
@@ -97,8 +98,17 @@ export default class {
 	}
 
 	includes(x, y) {
-		return this.x <= x && x <= this.x + this.width
-				&& this.y <= y && y <= this.y + this.height;
+		let cx, cy;
+		[cx, cy] = this.toClientPos(x, y);
+		return this.x <= cx && cx <= this.x + this.width
+				&& this.y <= cy && cy <= this.y + this.height;
+	}
+
+	toClientPos(x, y) {
+		let pos = [];
+		pos[0] = x - this.groundRect.x;
+		pos[1] = y - this.groundRect.y;
+		return pos;
 	}
 
 	drawUp(gx) {

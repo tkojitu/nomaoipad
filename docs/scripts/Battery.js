@@ -3,24 +3,34 @@ import ColorGuard from "./ColorGuard.js";
 export default class {
 	constructor(ground, formation) {
 		this.dmajor = null;
+		this.cguards = null;
 		this.ground = ground;
-		this.cguards = this.createCguards(formation);
+		this.formation = formation;
+	}
+
+	init() {
+		this.cguards = this.createCguards(this.formation);
 		this.addEventListeners();
 	}
 
 	createCguards(formation) {
 		let results = [];
 		let size = this.calcCguardSize(formation);
+		let rect = this.getGroundRect();
 		let y = 0;
 		for (let row = 0; row < formation.nids.length; ++row) {
 			let x = 0;
 			for (let col = 0; col < formation.nids[row].length; ++col) {
-				results.push(new ColorGuard(this, x, y, size, size, formation.nids[row][col]));
+				results.push(new ColorGuard(this, x, y, size, size, rect, formation.nids[row][col]));
 				x += size
 			}
 			y += size;
 		}
 		return results;
+	}
+
+	getGroundRect() {
+		return this.ground.getBoundingClientRect();
 	}
 
 	calcCguardSize(formation) {

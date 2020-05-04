@@ -7,18 +7,27 @@ export default class {
 
 	init() {
 		this.initGround();
+		this.battery.init();
 		this.draw();
 	}
 
 	initGround(config) {
 		let ground = document.getElementById("ground");
-		if (this.config.isMobile()) {
-			ground.width = window.innerWidth - 20;
-			ground.height = window.innerHeight - 20;
-		} else {
-			let monitor = document.getElementById("monitor");
-			ground.y = monitor.height + 10;
-		}
+		ground.width = this.getGroundWidth();
+		ground.height = this.getGroundHeight();
+	}
+
+	getGroundWidth() {
+		return window.innerWidth - 30;
+	}
+
+	getGroundHeight() {
+		return window.innerHeight - 30 - this.getMonitorHeight();
+	}
+
+	getMonitorHeight() {
+		let monitor = document.getElementById("monitor");
+		return monitor ? monitor.offsetHeight : 0;
 	}
 
 	draw() {
