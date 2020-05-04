@@ -18,7 +18,8 @@ window.addEventListener(
 		c.define(
 			"ground",
 			function(c) {
-				return document.getElementById("ground");
+				let config = c.geti("config");
+				return document.getElementById(config.getNameGround());
 			});
 		c.define(
 			"formation",
@@ -38,11 +39,12 @@ window.addEventListener(
 		c.define(
 			"monitor",
 			function(c) {
-				let monitor = document.getElementById("monitor");
+				let config = c.geti("config");
+				let monitor = document.getElementById(config.getNameMonitor());
 				if (!monitor) {
 					return null;
 				}
-				return new Monitor(c.geti("brass"));
+				return new Monitor(c.geti("config"), c.geti("brass"));
 			});
 		c.define(
 			"dmajor",

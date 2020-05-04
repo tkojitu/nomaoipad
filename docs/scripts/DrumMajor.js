@@ -12,8 +12,8 @@ export default class {
 		this.draw();
 	}
 
-	initGround(config) {
-		let ground = document.getElementById("ground");
+	initGround() {
+		let ground = document.getElementById(this.config.getNameGround());
 		ground.width = this.getGroundWidth();
 		ground.height = this.getGroundHeight();
 	}
@@ -27,7 +27,7 @@ export default class {
 	}
 
 	getMonitorHeight() {
-		let monitor = document.getElementById("monitor");
+		let monitor = document.getElementById(this.config.getNameMonitor());
 		return monitor ? monitor.offsetHeight : 0;
 	}
 

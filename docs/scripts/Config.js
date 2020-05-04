@@ -1,19 +1,17 @@
 export default class {
-	isMobile() {
-		let e = document.getElementById("padtype");
-		return e.value == "mobile";
+	getNameGround() {
+		return "ground";
 	}
 
-	isDesktop() {
-		let e = document.getElementById("padtype");
-		return e.value == "desktop";
+	getNameMonitor() {
+		return "monitor";
 	}
 
-	getOscilloName() {
+	getNameOscillo() {
 		return "oscillo";
 	}
 
-	getSpectrumName() {
+	getNameSpectrum() {
 		return "spectrum";
 	}
 }
