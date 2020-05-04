@@ -17,13 +17,7 @@ window.addEventListener(
 		c.define(
 			"ground",
 			function(c) {
-				let canvas = document.getElementById("ground");
-				let config = c.geti("config");
-				if (config.isMobile()) {
-					canvas.width = window.innerWidth - 20;
-					canvas.height = window.innerHeight - 20;
-				}
-				return canvas;
+				return document.getElementById("ground");
 			});
 		c.define(
 			"formation",
@@ -44,9 +38,9 @@ window.addEventListener(
 			"dmajor",
 			function(c) {
 				let battery = c.geti("battery");
-				let dmajor = new DrumMajor(battery, c.geti("brass"));
+				let dmajor = new DrumMajor(c.geti("config"), battery, c.geti("brass"));
 				battery.dmajor = dmajor;
 				return dmajor;
 			});
-		c.geti("dmajor").draw();
+		c.geti("dmajor").init();
 	});
