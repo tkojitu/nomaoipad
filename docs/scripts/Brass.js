@@ -285,7 +285,7 @@ export default class {
 			"D#9",
 			"E9",
 			"F9",
-			"F#\9",
+			"F#9",
 			"G9" // 127
 		];
 		let dic = new Map();
